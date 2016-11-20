@@ -1,5 +1,5 @@
 ﻿namespace E1Parser {
-    interface WebPageLoader {
+    public interface WebPageLoader {
         string GetPageCode(string pageURI);
     }
 }

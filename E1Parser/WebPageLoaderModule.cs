@@ -1,8 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
 
 namespace E1Parser {
-    sealed class WebPageLoaderModule : WebPageLoader {
+    public sealed class WebPageLoaderModule : WebPageLoader {
         public string GetPageCode(string pageURI) {
             WebRequest request = WebRequest.Create(pageURI);
             WebResponse response  = request.GetResponse();
@@ -10,13 +11,6 @@ namespace E1Parser {
             StreamReader reader = new StreamReader(responseStream);
             string pageCode = reader.ReadToEnd();
             response.Close();
-
-            //FIXME:debug//////////////////////////////////////////////////////
-            FileStream filewriter = new FileStream("./debug.log", FileMode.Create);
-            StreamWriter writer = new StreamWriter(filewriter);
-            writer.Write(pageCode);
-            ///////////////////////////////////////////////////////////////////
-
             return pageCode;
         }
     }
