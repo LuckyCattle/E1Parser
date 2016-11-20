@@ -5,9 +5,15 @@ namespace E1Parser {
     static class General {
         [STAThread]
         static void Main() {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            try {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            } catch (Exception exception) {
+                //FIXME: make as a dialog window
+                string errorText = exception.Message;
+                Console.WriteLine(errorText);
+            }
         }
     }
 }
