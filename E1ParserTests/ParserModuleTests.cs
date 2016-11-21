@@ -8,7 +8,6 @@ namespace E1Parser.Tests {
         public void ParserModuleTest() {
             WebPageLoader loader = new WebPageLoaderModule();
             Parser parser = new ParserModule(loader);
-
             Assert.IsTrue(parser != null);
         }
 
