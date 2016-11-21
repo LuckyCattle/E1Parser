@@ -8,7 +8,7 @@ namespace E1Parser {
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form1());
+                Application.Run(new MainWindow());
             } catch (Exception exception) {
                 //FIXME: make as a dialog window
                 string errorText = exception.Message;
