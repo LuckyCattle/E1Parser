@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace E1Parser {
-    sealed class Event {
+    public sealed class Event {
         private string name;
         private string date;
         private string place;
