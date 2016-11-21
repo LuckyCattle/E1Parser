@@ -3,7 +3,7 @@
 namespace E1Parser {
     sealed class Event {
         private string name;
-        private DateTime date;
+        private string date;
         private string place;
         private string address;
 
@@ -16,7 +16,7 @@ namespace E1Parser {
             }
         }
 
-        public DateTime Date {
+        public string Date {
             get {
                 return date;
             }
