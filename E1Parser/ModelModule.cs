@@ -1,16 +1,16 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace E1Parser {
     public sealed class ModelModule : Model {
         private WebPageLoader pageLoader;
         private Parser e1Parser;
-        ArrayList e1Events;
-        ArrayList observers;
+        List<Event> e1Events;
+        List<View> observers;
 
         public ModelModule() {
             pageLoader = new WebPageLoaderModule();
             e1Parser  = new ParserModule(pageLoader);
-            observers = new ArrayList();
+            observers = new List<View>();
         }
 
         public void RegisterObserver(View view) {

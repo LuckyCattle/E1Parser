@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace E1Parser.Tests {
     sealed class RefreshContentTestView : View {
@@ -14,7 +14,7 @@ namespace E1Parser.Tests {
             }
         }
 
-        public void Update(ArrayList events) {
+        public void Update(List<Event> events) {
             if (events == null) {
                 return;
             }
