@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace E1Parser {
     public partial class MainWindow : Form {
@@ -18,21 +19,25 @@ namespace E1Parser {
             this.cache = cache;
         }
 
+        private void browserButton_MouseUp(object sender, MouseEventArgs e) {
+            Process.Start("http://www.e1.ru/afisha/events/art");
+        }
+
+        private void eventsList_CellMouseUp(object unusable, DataGridViewCellMouseEventArgs userAction) {
+            int chosenRow = userAction.RowIndex;
+            bool clickedOnHeader = (chosenRow < 0);
+            if (clickedOnHeader) {
+                return;
+            }
+            DisplayAdressFor(chosenRow);
+        }
+
         public void DisplayEvents(List<Event> events) {
             foreach (Event eachEvent in events) {
                 eventsList.Rows.Add(eachEvent.Number, eachEvent.Date, eachEvent.Place, eachEvent.Name);
             }
             const int firstRowIndex = 0;
             DisplayAdressFor(firstRowIndex);
-        }
-
-        private void eventsList_CellMouseUp(object unusable, DataGridViewCellMouseEventArgs userAction) {
-            int chosenRow = userAction.RowIndex;
-            bool clickedOnHeader =  (chosenRow < 0);
-            if (clickedOnHeader) {
-                return;
-            }
-            DisplayAdressFor(chosenRow);
         }
 
         private void DisplayAdressFor(int rowIndex) {

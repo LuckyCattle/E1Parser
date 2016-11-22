@@ -78,6 +78,7 @@
             this.browserButton.TabIndex = 2;
             this.browserButton.Text = "open with browser";
             this.browserButton.UseVisualStyleBackColor = true;
+            this.browserButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.browserButton_MouseUp);
             // 
             // title
             // 
