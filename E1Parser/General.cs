@@ -8,11 +8,17 @@ namespace E1Parser {
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainWindow());
+
+                MainWindow mainWindow = new MainWindow();
+                Model e1EventsModel = new ModelModule();
+                View e1EventsView = new ViewModule(mainWindow);
+                e1EventsModel.RegisterObserver(e1EventsView);
+                e1EventsModel.RefreshContent();
+
+                Application.Run(mainWindow);
             } catch (Exception exception) {
-                //FIXME: make as a dialog window
                 string errorText = exception.Message;
-                Console.WriteLine(errorText);
+                MessageBox.Show(errorText);
             }
         }
     }

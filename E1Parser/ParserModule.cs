@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace E1Parser {
     public sealed class ParserModule : Parser {
@@ -15,15 +15,15 @@ namespace E1Parser {
             currentEvent = new Event();
         }
 
-        public ArrayList ExtractEvents() {
+        public List<Event> ExtractEvents() {
             const string requiredURI = "http://www.e1.ru/afisha/events/art";
             string  pageCode = pageLoader.GetPageCode(requiredURI);
-            ArrayList events = Parse(pageCode);
+            List<Event> events = Parse(pageCode);
             return events;
         }
 
-        private ArrayList Parse(string pageCode) {
-            ArrayList events = new ArrayList();
+        private List<Event> Parse(string pageCode) {
+            List<Event> events = new List<Event>();
 
             while ( AreRawItemsLeft(pageCode) ) {
                 bool nextItemIsPlace = DefineNextItemKind(pageCode);

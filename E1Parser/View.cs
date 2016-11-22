@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace E1Parser {
     public interface View {
-        void Update(ArrayList events);
+        void Update(List<Event> events);
     }
 }

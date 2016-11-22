@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace E1Parser.Tests {
     [TestClass()]
@@ -16,7 +16,7 @@ namespace E1Parser.Tests {
             WebPageLoader loader = new WebPageLoaderModule();
             Parser parser = new ParserModule(loader);
 
-            ArrayList events = parser.ExtractEvents();
+            List<Event> events = parser.ExtractEvents();
 
             Assert.IsTrue(events.Count > 0);
             foreach (Event eachEvent in events) {

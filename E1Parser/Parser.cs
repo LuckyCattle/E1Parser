@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace E1Parser {
     public interface Parser {
-        ArrayList ExtractEvents();
+        List<Event> ExtractEvents();
     }
 }
