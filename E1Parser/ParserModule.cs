@@ -8,11 +8,11 @@ namespace E1Parser {
         private const string eventMarker = "big_orange";
         private string currentPlace = "[no data]";
         private string currentAddress = "[no data]";
+        private int currentNumber;
         private Event currentEvent;
 
         public ParserModule(WebPageLoader loader) {
             pageLoader = loader;
-            currentEvent = new Event();
         }
 
         public List<Event> ExtractEvents() {
@@ -24,6 +24,8 @@ namespace E1Parser {
 
         private List<Event> Parse(string pageCode) {
             List<Event> events = new List<Event>();
+            currentEvent = new Event();
+            currentNumber = 0;
 
             while ( AreRawItemsLeft(pageCode) ) {
                 bool nextItemIsPlace = DefineNextItemKind(pageCode);
@@ -88,12 +90,14 @@ namespace E1Parser {
         private void ExtractEventData(string pageCode) {
             string[] separators = { "</b>", "<b>" };
             string[] tokens = pageCode.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            string currentEventName = tokens[0];
+            string currentName = tokens[0];
             string currentDate = tokens[2];
-            currentEventName = CleanToken(currentEventName);
+            currentName = CleanToken(currentName);
             currentDate = CleanToken(currentDate);
-            currentEvent.Name  = currentEventName;
-            currentEvent.Date  = currentDate;
+            ++currentNumber;
+            currentEvent.Number = currentNumber;
+            currentEvent.Name = currentName;
+            currentEvent.Date = currentDate;
             currentEvent.Place = currentPlace;
             currentEvent.Address = currentAddress;
         }

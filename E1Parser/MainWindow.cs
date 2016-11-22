@@ -20,7 +20,7 @@ namespace E1Parser {
 
         public void DisplayEvents(List<Event> events) {
             foreach (Event eachEvent in events) {
-                eventsList.Rows.Add(eachEvent.Id, eachEvent.Date, eachEvent.Place, eachEvent.Name);
+                eventsList.Rows.Add(eachEvent.Number, eachEvent.Date, eachEvent.Place, eachEvent.Name);
             }
             const int firstRowIndex = 0;
             DisplayAdressFor(firstRowIndex);

@@ -1,20 +1,17 @@
 ﻿namespace E1Parser {
     public sealed class Event {
-        private static int examplesQuantity = 0;
-        private int id;
+        private int number;
         private string name;
         private string date;
         private string place;
         private string address;
 
-        public Event() {
-            ++examplesQuantity;
-            id = examplesQuantity;
-        }
-
-        public int Id {
+        public int Number {
             get {
-                return id;
+                return number;
+            }
+            set {
+                number = value;
             }
         }
 
