@@ -27,7 +27,12 @@ namespace E1Parser {
         }
 
         private void eventsList_CellMouseUp(object unusable, DataGridViewCellMouseEventArgs userAction) {
-            DisplayAdressFor(userAction.RowIndex);
+            int chosenRow = userAction.RowIndex;
+            bool clickedOnHeader =  (chosenRow < 0);
+            if (clickedOnHeader) {
+                return;
+            }
+            DisplayAdressFor(chosenRow);
         }
 
         private void DisplayAdressFor(int rowIndex) {

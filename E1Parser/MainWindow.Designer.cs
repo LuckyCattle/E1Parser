@@ -64,6 +64,7 @@
             this.addressField.Location = new System.Drawing.Point(82, 275);
             this.addressField.Margin = new System.Windows.Forms.Padding(4);
             this.addressField.Name = "addressField";
+            this.addressField.ReadOnly = true;
             this.addressField.Size = new System.Drawing.Size(826, 25);
             this.addressField.TabIndex = 1;
             // 
@@ -136,8 +137,7 @@
             this.date.HeaderText = "date";
             this.date.Name = "date";
             this.date.ReadOnly = true;
-            this.date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.date.Width = 46;
+            this.date.Width = 65;
             // 
             // place
             // 

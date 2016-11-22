@@ -5,7 +5,7 @@ namespace E1Parser {
     static class General {
         [STAThread]
         static void Main() {
-            try {
+            //try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
 
@@ -16,10 +16,10 @@ namespace E1Parser {
                 e1EventsModel.RefreshContent();
 
                 Application.Run(mainWindow);
-            } catch (Exception exception) {
+            /*} catch (Exception exception) {
                 string errorText = exception.Message;
                 MessageBox.Show(errorText);
-            }
+            }*/
         }
     }
 }
