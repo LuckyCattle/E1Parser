@@ -22,17 +22,17 @@ namespace E1Parser {
             foreach (Event eachEvent in events) {
                 eventsList.Rows.Add(eachEvent.Id, eachEvent.Date, eachEvent.Place, eachEvent.Name);
             }
-            const int firstRow = 0;
-            DisplayAdressFor(firstRow);
+            const int firstRowIndex = 0;
+            DisplayAdressFor(firstRowIndex);
         }
 
-        public void eventsList_CellMouseUp(object sender, DataGridViewCellMouseEventArgs userAction) {
+        private void eventsList_CellMouseUp(object unusable, DataGridViewCellMouseEventArgs userAction) {
             DisplayAdressFor(userAction.RowIndex);
         }
 
         private void DisplayAdressFor(int rowIndex) {
+            DataGridViewRow requiredRow = eventsList.Rows.SharedRow(rowIndex);
             const int indexOfIdColumn = 0;
-            DataGridViewRow  requiredRow = eventsList.Rows.SharedRow(rowIndex);
             DataGridViewCell requiredIdCell = requiredRow.Cells[indexOfIdColumn];
             int requiredEventId = (int)requiredIdCell.Value;
             int requiredEventIndex = requiredEventId - 1;
