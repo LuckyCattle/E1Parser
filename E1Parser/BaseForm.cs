@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace E1Parser {
-    public partial class MainWindow : Form {
+    public partial class BaseForm : Form {
         private ViewModuleCache cache;
 
-        public MainWindow() {
+        public BaseForm() {
             InitializeComponent();
             AdjustComponentSettings();
         }
 
         private void AdjustComponentSettings() {
             eventsList.RowHeadersVisible = false;
+        }
+
+        private void BaseForm_Load(object sender, System.EventArgs e) {
+            Initializer.BuildApplication(this);
+            Initializer.StartApplication();
         }
 
         public void bindWithViewModuleCache(ViewModuleCache cache) {

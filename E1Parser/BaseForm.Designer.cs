@@ -1,5 +1,5 @@
 ﻿namespace E1Parser {
-    partial class MainWindow {
+    partial class BaseForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,17 +23,17 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
             this.eventsList = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.place = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressField = new System.Windows.Forms.TextBox();
             this.browserButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.layoutManager = new System.Windows.Forms.TableLayoutPanel();
             this.addressLabel = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.place = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.eventsList)).BeginInit();
             this.layoutManager.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,36 @@
             this.eventsList.Size = new System.Drawing.Size(904, 196);
             this.eventsList.TabIndex = 0;
             this.eventsList.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.eventsList_CellMouseUp);
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.id.HeaderText = "N";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 41;
+            // 
+            // date
+            // 
+            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.date.HeaderText = "date";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 65;
+            // 
+            // place
+            // 
+            this.place.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.place.HeaderText = "place";
+            this.place.Name = "place";
+            this.place.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.HeaderText = "event";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
             // 
             // addressField
             // 
@@ -124,37 +154,7 @@
             this.addressLabel.TabIndex = 3;
             this.addressLabel.Text = "address:";
             // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.id.HeaderText = "N";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 41;
-            // 
-            // date
-            // 
-            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.date.HeaderText = "date";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 65;
-            // 
-            // place
-            // 
-            this.place.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.place.HeaderText = "place";
-            this.place.Name = "place";
-            this.place.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.HeaderText = "event";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // MainWindow
+            // BaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,8 +164,9 @@
             this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MainWindow";
+            this.Name = "BaseForm";
             this.Text = "E1Parser";
+            this.Load += new System.EventHandler(this.BaseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.eventsList)).EndInit();
             this.layoutManager.ResumeLayout(false);
             this.layoutManager.PerformLayout();

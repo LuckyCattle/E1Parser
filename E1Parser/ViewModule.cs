@@ -2,11 +2,11 @@
 
 namespace E1Parser {
     public sealed class ViewModule : View {
-        private MainWindow mainWindow;
+        private BaseForm mainWindow;
         private ViewModuleCache cache;
 
-        public ViewModule(MainWindow window) {
-            mainWindow = window;
+        public ViewModule(BaseForm mainWindow) {
+            this.mainWindow = mainWindow;
             cache = new ViewModuleCache();
             mainWindow.bindWithViewModuleCache(cache);
         }

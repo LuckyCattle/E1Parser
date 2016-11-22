@@ -6,7 +6,7 @@ namespace E1Parser.Tests {
     public class ViewModuleTests {
         [TestMethod()]
         public void ViewModuleTest() {
-            MainWindow window = new MainWindow();
+            BaseForm window = new BaseForm();
             View viewExample  = new ViewModule(window);
             Assert.IsTrue(viewExample != null);
         }
