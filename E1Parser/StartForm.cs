@@ -48,7 +48,7 @@ namespace E1Parser {
         private void Tick(object unusable) {
             const int allWork = 100;
             int undone = allWork - tickTackerValue;
-            int step = undone / 10;
+            int step = undone / 8;
             tickTackerValue += step;
             tickTacker.ReportProgress(tickTackerValue);
         }
@@ -82,6 +82,10 @@ namespace E1Parser {
             timer.Dispose();
             tickTacker.CancelAsync();
             tickTacker.Dispose();
+        }
+
+        private void terminateButton_MouseUp(object sender, MouseEventArgs e) {
+            Application.Exit();
         }
     }
 }
