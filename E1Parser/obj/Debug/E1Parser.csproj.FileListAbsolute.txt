@@ -1,0 +1,10 @@
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\bin\Debug\E1Parser.exe.config
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.Properties.Resources.resources
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.csproj.GenerateResource.Cache
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\bin\Debug\E1Parser.exe
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\bin\Debug\E1Parser.pdb
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.exe
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.pdb
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.BaseForm.resources
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.StartForm.resources
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1Parser\obj\Debug\E1Parser.csprojResolveAssemblyReference.cache

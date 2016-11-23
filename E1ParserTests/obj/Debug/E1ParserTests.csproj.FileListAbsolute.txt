@@ -1,0 +1,8 @@
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\bin\Debug\E1ParserTests.dll
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\bin\Debug\E1ParserTests.pdb
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\bin\Debug\E1Parser.exe
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\bin\Debug\E1Parser.pdb
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\obj\Debug\E1ParserTests.csprojResolveAssemblyReference.cache
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\obj\Debug\E1ParserTests.dll
+C:\0_sugarbaron\0_programmism\0_c#_projects\E1Parser\E1ParserTests\obj\Debug\E1ParserTests.pdb
