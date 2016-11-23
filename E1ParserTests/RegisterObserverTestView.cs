@@ -17,5 +17,8 @@ namespace E1Parser.Tests {
         public void Update(List<Event> events) {
             isTestPassed = true;
         }
+
+        public void BecomeVisible() {
+        }
     }
 }

@@ -3,5 +3,6 @@
 namespace E1Parser {
     public interface View {
         void Update(List<Event> events);
+        void BecomeVisible();
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
 namespace E1Parser.Tests {
-    sealed class RefreshContentTestView : View {
+    public sealed class ActivateTestView : View {
         private bool isTestPassed;
 
-        public RefreshContentTestView() {
+        public ActivateTestView() {
             isTestPassed = false;
         }
 
@@ -15,15 +15,10 @@ namespace E1Parser.Tests {
         }
 
         public void Update(List<Event> events) {
-            if (events == null) {
-                return;
-            }
-            if (events.Count > 0) {
-                isTestPassed = true;
-            }
         }
 
         public void BecomeVisible() {
+            isTestPassed = true;
         }
     }
 }
