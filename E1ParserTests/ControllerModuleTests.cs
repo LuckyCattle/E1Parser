@@ -38,5 +38,17 @@ namespace E1Parser.Tests {
             bool isTestPassed = model.IsTestPassed;
             Assert.IsTrue(isTestPassed);
         }
+
+        [TestMethod()]
+        public void BindWithViewTest() {
+            ActivateTestView viewEmulator = new ActivateTestView();
+            Controller controller = new ControllerModule();
+
+            controller.BindWithView(viewEmulator);
+
+            controller.Activate();
+            bool isTestPassed = viewEmulator.IsTestPassed;
+            Assert.IsTrue(isTestPassed);
+        }
     }
 }
