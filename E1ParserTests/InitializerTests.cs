@@ -5,15 +5,16 @@ namespace E1Parser.Tests {
     public class InitializerTests {
         [TestMethod()]
         public void BuildApplicationTest() {
-            BaseForm mainWindow = new BaseForm();
-            Initializer.BuildApplication(mainWindow);
+            Initializer.BuildApplication();
         }
 
         [TestMethod()]
-        public void StartApplicationTest() {
-            BaseForm mainWindow = new BaseForm();
-            Initializer.BuildApplication(mainWindow);
-            Initializer.StartApplication();
+        public void GetControllerTest() {
+            Initializer.BuildApplication();
+
+            Controller actual = Initializer.GetController();
+
+            Assert.IsTrue(actual != null);
         }
     }
 }
