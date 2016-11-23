@@ -1,14 +1,19 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 
 namespace E1Parser.Tests {
     [TestClass()]
     public class ViewModuleTests {
         [TestMethod()]
         public void ViewModuleTest() {
-            BaseForm window = new BaseForm();
             View viewExample  = new ViewModule();
             Assert.IsTrue(viewExample != null);
+        }
+
+        [TestMethod()]
+        public void BecomeVisibleTest() {
+            View viewExample = new ViewModule();
+
+            viewExample.BecomeVisible();
         }
     }
 }
