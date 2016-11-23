@@ -15,11 +15,6 @@ namespace E1Parser {
             eventsList.RowHeadersVisible = false;
         }
 
-        private void BaseForm_Load(object sender, System.EventArgs e) {
-            Initializer.BuildApplication(this);
-            Initializer.StartApplication();
-        }
-
         public void bindWithViewModuleCache(ViewModuleCache cache) {
             this.cache = cache;
         }
@@ -54,6 +49,10 @@ namespace E1Parser {
             string address = cache.GetEventAddress(requiredEventIndex);
 
             addressField.Text = address;
+        }
+
+        private void BaseForm_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

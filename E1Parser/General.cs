@@ -8,7 +8,7 @@ namespace E1Parser {
             try {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new BaseForm());
+                Application.Run(new StartForm());
             } catch (Exception exception) {
                 string errorText = exception.Message;
                 MessageBox.Show(errorText);

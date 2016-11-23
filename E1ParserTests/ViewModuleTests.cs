@@ -7,7 +7,7 @@ namespace E1Parser.Tests {
         [TestMethod()]
         public void ViewModuleTest() {
             BaseForm window = new BaseForm();
-            View viewExample  = new ViewModule(window);
+            View viewExample  = new ViewModule();
             Assert.IsTrue(viewExample != null);
         }
     }

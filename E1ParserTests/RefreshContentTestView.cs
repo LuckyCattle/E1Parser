@@ -22,5 +22,8 @@ namespace E1Parser.Tests {
                 isTestPassed = true;
             }
         }
+
+        public void BecomeVisible() {
+        }
     }
 }

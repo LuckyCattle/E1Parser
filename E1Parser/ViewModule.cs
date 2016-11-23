@@ -5,8 +5,9 @@ namespace E1Parser {
         private BaseForm mainWindow;
         private ViewModuleCache cache;
 
-        public ViewModule(BaseForm mainWindow) {
-            this.mainWindow = mainWindow;
+        public ViewModule() {
+            mainWindow = new BaseForm();
+            mainWindow.Hide();
             cache = new ViewModuleCache();
             mainWindow.bindWithViewModuleCache(cache);
         }
@@ -14,6 +15,10 @@ namespace E1Parser {
         public void Update(List<Event> freshEvents) {
             cache.Save(freshEvents);
             mainWindow.DisplayEvents(freshEvents);
+        }
+
+        public void BecomeVisible() {
+            mainWindow.Show();
         }
     }
 }

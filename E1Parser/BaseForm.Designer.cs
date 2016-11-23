@@ -166,7 +166,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BaseForm";
             this.Text = "E1Parser";
-            this.Load += new System.EventHandler(this.BaseForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.eventsList)).EndInit();
             this.layoutManager.ResumeLayout(false);
             this.layoutManager.PerformLayout();
