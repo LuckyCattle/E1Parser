@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 namespace E1Parser {
-    static class General {
+    static class Program {
         [STAThread]
         static void Main() {
             try {

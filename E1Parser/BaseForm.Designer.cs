@@ -54,7 +54,7 @@
             this.eventsList.Margin = new System.Windows.Forms.Padding(4);
             this.eventsList.Name = "eventsList";
             this.eventsList.RowHeadersWidth = 4;
-            this.eventsList.Size = new System.Drawing.Size(904, 196);
+            this.eventsList.Size = new System.Drawing.Size(904, 304);
             this.eventsList.TabIndex = 0;
             this.eventsList.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.eventsList_CellMouseUp);
             // 
@@ -91,7 +91,7 @@
             // addressField
             // 
             this.addressField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressField.Location = new System.Drawing.Point(82, 275);
+            this.addressField.Location = new System.Drawing.Point(82, 347);
             this.addressField.Margin = new System.Windows.Forms.Padding(4);
             this.addressField.Name = "addressField";
             this.addressField.ReadOnly = true;
@@ -101,7 +101,7 @@
             // browserButton
             // 
             this.browserButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.browserButton.Location = new System.Drawing.Point(756, 430);
+            this.browserButton.Location = new System.Drawing.Point(756, 389);
             this.browserButton.Margin = new System.Windows.Forms.Padding(4);
             this.browserButton.Name = "browserButton";
             this.browserButton.Size = new System.Drawing.Size(152, 33);
@@ -138,17 +138,17 @@
             this.layoutManager.Name = "layoutManager";
             this.layoutManager.RowCount = 4;
             this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.33621F));
-            this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.8319F));
-            this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.8319F));
-            this.layoutManager.Size = new System.Drawing.Size(912, 467);
+            this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.80549F));
+            this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.47132F));
+            this.layoutManager.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.47382F));
+            this.layoutManager.Size = new System.Drawing.Size(912, 426);
             this.layoutManager.TabIndex = 4;
             // 
             // addressLabel
             // 
             this.addressLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(3, 279);
+            this.addressLabel.Location = new System.Drawing.Point(3, 351);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(72, 18);
             this.addressLabel.TabIndex = 3;
@@ -159,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(912, 467);
+            this.ClientSize = new System.Drawing.Size(912, 426);
             this.Controls.Add(this.layoutManager);
             this.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -167,6 +167,7 @@
             this.Name = "BaseForm";
             this.Text = "E1Parser";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseForm_FormClosed);
+            this.Load += new System.EventHandler(this.BaseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.eventsList)).EndInit();
             this.layoutManager.ResumeLayout(false);
             this.layoutManager.PerformLayout();

@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace E1Parser {
     public partial class BaseForm : Form {
@@ -8,11 +9,15 @@ namespace E1Parser {
 
         public BaseForm() {
             InitializeComponent();
+        }
+
+        private void BaseForm_Load(object sender, System.EventArgs e) {
             AdjustComponentSettings();
         }
 
         private void AdjustComponentSettings() {
             eventsList.RowHeadersVisible = false;
+            DesktopLocation = new Point(250, 100);
         }
 
         public void bindWithViewModuleCache(ViewModuleCache cache) {

@@ -11,26 +11,20 @@ namespace E1Parser {
 
         public StartForm() {
             InitializeComponent();
-            CompleteInitialization();
         }
 
-        private void CompleteInitialization() {
+        private void StartForm_Load(object sender, EventArgs e) {
+            DesktopLocation = new Point(450, 250);
         }
 
         private void StartForm_Shown(object sender, EventArgs e) {
-            AdjustComponentSettings();
-
             RunProgressMover();
 
             Initializer.BuildApplication();
             controller = Initializer.GetController();
             RunMvcStarter();
         }
-
-        private void AdjustComponentSettings() {
-            DesktopLocation = new Point(450, 250);
-        }
-
+        
         private void RunProgressMover() {
             tickTackerValue = 0;
             tickTacker.WorkerReportsProgress = true;
@@ -48,7 +42,7 @@ namespace E1Parser {
         private void Tick(object unusable) {
             const int allWork = 100;
             int undone = allWork - tickTackerValue;
-            int step = undone / 8;
+            int step = undone / 5;
             tickTackerValue += step;
             tickTacker.ReportProgress(tickTackerValue);
         }
